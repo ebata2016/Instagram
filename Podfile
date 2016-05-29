@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'Instagram' do
     pod 'ESTabBarController'
-    pod 'Firebase'
+    pod 'Firebase' , '2.5.0'
+    pod 'SVProgressHUD'
 end
 
 #target 'InstagramTests' do

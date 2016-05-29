@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         
         // Firebaseを初期化して認証情報を取得する
         let firebaseRef = Firebase(url: CommonConst.FirebaseURL)
+        
         let authData = firebaseRef.authData
         
         // 認証情報=authData が無ければログインしていない
