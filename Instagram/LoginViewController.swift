@@ -58,6 +58,7 @@ class LoginViewController: UIViewController {
             })
         }
     }
+    
     // アカウント作成ボタンをタップしたときに呼ばれるメソッド
     @IBAction func handleCreateAcountButton(sender: AnyObject) {
         

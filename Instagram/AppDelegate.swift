@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         // Adobeの管理画面で登録したアプリのClientIDとSecretの文字列を設定する
-        AdobeUXAuthManager.sharedManager().setAuthenticationParametersWithClientID("登録したアプリのClientID", withClientSecret: "登録したアプリのSecret")
+        AdobeUXAuthManager.sharedManager().setAuthenticationParametersWithClientID("c98f28801b0f4d479b72b083ea54f39a", withClientSecret: "c3366d7e-bbf5-444c-a294-e9a60750e570")
         
         return true
     }
