@@ -52,8 +52,8 @@
                         <state key="normal" title="Button" image="like_none"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4F-iI-n48">
-                        <rect key="frame" x="18" y="591.5" width="443" height="43"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="18" y="601.5" width="443" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -73,7 +73,7 @@
                     <constraint firstItem="Mk1-XW-MOw" firstAttribute="leading" secondItem="Lec-pP-T0K" secondAttribute="trailing" constant="10" id="8In-Ub-bCh"/>
                     <constraint firstItem="H5e-qQ-Fuz" firstAttribute="centerY" secondItem="Mk1-XW-MOw" secondAttribute="centerY" id="CBM-3o-EB1"/>
                     <constraint firstItem="Lec-pP-T0K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="E1E-BQ-cbD"/>
-                    <constraint firstItem="H4F-iI-n48" firstAttribute="top" secondItem="LBC-sX-Cxv" secondAttribute="bottom" constant="10" id="IDc-bw-nlw"/>
+                    <constraint firstItem="H4F-iI-n48" firstAttribute="top" secondItem="LBC-sX-Cxv" secondAttribute="bottom" constant="20" id="IDc-bw-nlw"/>
                     <constraint firstAttribute="trailingMargin" secondItem="LBC-sX-Cxv" secondAttribute="trailing" constant="10" id="IwB-89-X4P"/>
                     <constraint firstItem="KBc-Mk-AJ6" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="SV6-bX-Ut3"/>
                     <constraint firstItem="Mk1-XW-MOw" firstAttribute="centerY" secondItem="Lec-pP-T0K" secondAttribute="centerY" id="WE7-Xh-tnE"/>
