@@ -15,6 +15,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var commentLabel: UILabel!
     
     var postData: PostData?
     
@@ -51,6 +53,11 @@ class PostTableViewCell: UITableViewCell {
         } else {
             let buttonImage = UIImage(named: "like_none")
             likeButton.setImage(buttonImage, forState: UIControlState.Normal)
+        }
+        
+        commentLabel.text = postData!.comment
+        if commentLabel.text == nil {
+            commentLabel.text = ""
         }
         
         super.layoutSubviews()

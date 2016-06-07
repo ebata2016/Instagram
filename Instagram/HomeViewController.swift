@@ -84,8 +84,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(HomeViewController.handleButton(_:event:)), forControlEvents:  UIControlEvents.TouchUpInside)
         
+        cell.commentButton.addTarget(self, action:#selector(HomeViewController.handleCommentButton(_:event:)), forControlEvents:  UIControlEvents.TouchUpInside)
+        
         // UILabelの行数が変わっている可能性があるので再描画させる
-        cell.layoutIfNeeded()
+ 
+      cell.layoutIfNeeded()   
         
         return cell
     }
@@ -139,5 +142,30 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let post = ["caption": caption!, "image": imageString!, "name": name!, "time": time, "likes": likes]
         let postRef = Firebase(url: CommonConst.FirebaseURL).childByAppendingPath(CommonConst.PostPATH)
         postRef.childByAppendingPath(postData.id).setValue(post)
+    }
+    
+    func handleCommentButton(sender: UIButton, event:UIEvent) {
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches()?.first
+        let point = touch!.locationInView(self.tableView)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("Comment")
+        let commentViewController: CommentViewController = viewController as! CommentViewController
+        commentViewController.firebaseRef = firebaseRef
+        commentViewController.postData = postData
+        
+        self.presentViewController(viewController!, animated: true, completion: nil)
+        
+ //       let commentViewController: CommentViewController = viewController as! CommentViewController
+//        print("comment = %s\n", commentViewController.newComment)
+        
+//        let ud = NSUserDefaults.standardUserDefaults()
+//        let name = ud.objectForKey(CommonConst.DisplayNameKey) as! String
+
     }
 }
